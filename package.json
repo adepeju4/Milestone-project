@@ -1,0 +1,16 @@
+{
+  "name": "milestone-1",
+  "version": "1.0.0",
+  "description": "Stutern Milestone Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Adepeju4@bitbucket.org/Adepeju4/milestone-project.git"
+  },
+  "author": "Adepeju Orefejo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Adepeju4/milestone-project#readme"
+}
