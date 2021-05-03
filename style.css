@@ -42,6 +42,11 @@ input {
     outline: none;
 }
 
+#age,
+#currentLevel {
+    width: 50%;
+}
+
 .input {
     padding-bottom: 30px;
 }
