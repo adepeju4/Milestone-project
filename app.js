@@ -6,7 +6,7 @@ let faveClub = document.querySelector("#faveClub");
 let userSubmit = document.querySelector(".submit");
 let table_body = document.querySelector(".table-body");
 let table = document.querySelector(".table");
-
+let all_clear = document.querySelector("all-clear");
 
 let objectArray = [];
 
@@ -36,7 +36,7 @@ function createObjectAndPushToArray() {
 }
 
 function putObjectInTable(myArray) {
-    let position = "beforeEnd";
+    let position = "afterbegin";
     let row;
     myArray.forEach((value) => {
         let newValue = JSON.parse(value);
@@ -60,3 +60,18 @@ function deleteRow(event) {
         event.target.closest("tr").remove();
     }
 }
+
+// function deleteTable(event) {
+//     //     let headRow = `<tr>
+//     //     <th scope="col">First Name</th>
+//     //     <th scope="col">Last Name</th>
+//     //     <th scope="col">Age</th>
+//     //     <th scope="col">Current Level</th>
+//     //     <th scope="col">Favorite Club</th>
+//     //     <th><button class="all-clear">Clear Form</button></th>
+//     // </tr>`;
+
+//     if (event.target.classList.contains("all-clear")) {
+//         event.target.closest("tr").remove();
+//     }
+// }
