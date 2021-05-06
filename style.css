@@ -10,7 +10,7 @@ html body {
 
 main {
     padding-top: 100px;
-    background: url(./Images/hero-image.png);
+    background: url(./hero-image.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
