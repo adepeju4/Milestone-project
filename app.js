@@ -5,12 +5,15 @@ let currentLevel = document.querySelector("#currentLevel");
 let faveClub = document.querySelector("#faveClub");
 let userSubmit = document.querySelector(".submit");
 let table_body = document.querySelector(".table-body");
+let table = document.querySelector(".table");
+
 
 let objectArray = [];
 
 
 
 userSubmit.addEventListener('click', onClick);
+table_body.addEventListener('click', deleteRow);
 
 function onClick(event) {
     event.preventDefault();
@@ -42,7 +45,7 @@ function putObjectInTable(myArray) {
                    <td>${newValue.user_age}</td>
                    <td>${newValue.current_level}</td>
                    <td>${newValue.fave_club}</td>
-                   <td><button>Delete User</button></td>
+                   <td><button class="delete-row">Delete User</button></td>
                </tr>`;
         output += row;
     })
@@ -51,24 +54,8 @@ function putObjectInTable(myArray) {
 }
 
 
-
-
-
-
-
-
-
-// let nValue = JSON.parse(values);
-//         let row = `
-//         <tr class = "table-row">
-//             <td>${nValue.fName}</td>
-//             <td>${nValue.sName}</td>
-//             <td>${nValue.Age}</td>
-//             <td>${nValue.current_level}</td>
-//             <td>${nValue.favourite_club}</td>
-//             <td><i class="far fa-trash-alt delete"></i></td>
-//         </tr>
-//         `
-//         output+=row
-//     })
-//    return tableBody.innerHTML = output;
+function deleteRow(event) {
+    if (event.target.classList.contains("delete-row")) {
+        event.target.closest("tr").remove();
+    }
+}
