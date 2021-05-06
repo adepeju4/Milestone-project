@@ -36,10 +36,11 @@ function createObjectAndPushToArray() {
 }
 
 function putObjectInTable(myArray) {
-    let output = "";
+    let position = "beforeEnd";
+    let row;
     myArray.forEach((value) => {
         let newValue = JSON.parse(value);
-        let row = `<tr>
+        row = `<tr>
                    <th scope="row" id="firstName">${newValue.first_Name}</th>
                    <td>${newValue.last_Name}</td>
                    <td>${newValue.user_age}</td>
@@ -47,9 +48,9 @@ function putObjectInTable(myArray) {
                    <td>${newValue.fave_club}</td>
                    <td><button class="delete-row">Delete User</button></td>
                </tr>`;
-        output += row;
+
     })
-    return table_body.innerHTML = output;
+    return table_body.insertAdjacentHTML(position, row);
 
 }
 
