@@ -1,0 +1,142 @@
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 100px;
+    background: url(./Images/hero-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-container {
+    background: rgba( 224, 189, 189, 0.15);
+    box-shadow: 0 8px 32px 0 rgb(236, 205, 100);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+input {
+    width: 100%;
+    outline: none;
+}
+
+#age,
+#currentLevel {
+    width: 50%;
+}
+
+.input {
+    padding-bottom: 30px;
+}
+
+.jumbotron {
+    color: floralwhite;
+    background-color: #f29f05;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.submit {
+    width: 70%;
+}
+
+.button-container {
+    display: flex;
+    height: 55px;
+    width: 100%;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #034873;
+    color: floralwhite;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: #d3d3d3;
+    color: black;
+}
+
+table {}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+table tr {
+    color: #034873;
+}
+
+table thead button {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    background-color: transparent;
+    color: floralwhi;
+    box-shadow: 3px 8px 8px -6px rgb(34, 31, 31);
+}
+
+.table-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f29f05;
+    color: floralwhite;
+}
+
+@media screen and (max-width: 576px) {
+    .form-container {
+        width: 90%;
+    }
+    .form {
+        height: 400px;
+    }
+    .submit {
+        height: 40px;
+        width: 100%;
+    }
+    .input {
+        padding-bottom: 5px;
+    }
+    .button-container {
+        display: block;
+    }
+    .table-container {
+        padding-left: 90px;
+    }
+}

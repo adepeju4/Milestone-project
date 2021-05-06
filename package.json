@@ -1,0 +1,21 @@
+{
+    "name": "milestone-1",
+    "version": "1.0.0",
+    "description": "Stutern Milestone Project",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run lite",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lite": "lite-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://Adepeju4@bitbucket.org/Adepeju4/milestone-project.git"
+    },
+    "author": "Adepeju Orefejo",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/Adepeju4/milestone-project#readme",
+    "devDependencies": {
+        "lite-server": "^2.6.1"
+    }
+}
