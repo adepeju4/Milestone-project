@@ -6,7 +6,10 @@ let faveClub = document.querySelector("#faveClub");
 let userSubmit = document.querySelector(".submit");
 let table_body = document.querySelector(".table-body");
 let table = document.querySelector(".table");
-let all_clear = document.querySelector("all-clear");
+let all_clear = document.querySelector(".all-clear");
+let table_head = document.querySelector(".thead-dark");
+let form = document.querySelector(".input-form");
+
 
 let objectArray = [];
 
@@ -15,10 +18,12 @@ let objectArray = [];
 userSubmit.addEventListener('click', onClick);
 table_body.addEventListener('click', deleteRow);
 
+
 function onClick(event) {
     event.preventDefault();
     createObjectAndPushToArray();
     putObjectInTable(objectArray);
+    resetForm();
 }
 
 function createObjectAndPushToArray() {
@@ -61,17 +66,13 @@ function deleteRow(event) {
     }
 }
 
-// function deleteTable(event) {
-//     //     let headRow = `<tr>
-//     //     <th scope="col">First Name</th>
-//     //     <th scope="col">Last Name</th>
-//     //     <th scope="col">Age</th>
-//     //     <th scope="col">Current Level</th>
-//     //     <th scope="col">Favorite Club</th>
-//     //     <th><button class="all-clear">Clear Form</button></th>
-//     // </tr>`;
+function resetForm() {
+    form.reset()
+}
 
-//     if (event.target.classList.contains("all-clear")) {
-//         event.target.closest("tr").remove();
-//     }
-// }
+function deleteAll() {
+
+    console.log('got here');
+    objectArray = [];
+    table_body.innerHTML = '';
+}
